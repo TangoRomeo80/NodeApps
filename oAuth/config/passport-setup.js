@@ -5,6 +5,8 @@ passport.use(
   new GoogleStrategy(
     {
       // options for google strategy
+      // clientID: /* add your client ID here */,
+      // clientSecret: /* add your client secret here */
     },
     () => {
       // passport callback function
