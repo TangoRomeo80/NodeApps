@@ -12,14 +12,16 @@ const app = express()
 app.set('view engine', 'ejs')
 
 // set up session cookies
-app.use(cookieSession({
-    maxAge: 24 * 60 * 60 * 1000,
-    keys: [keys.session.cookieKey]
-}));
+// app.use(
+//   cookieSession({
+//     maxAge: 24 * 60 * 60 * 1000,
+//     keys: [keys.session.cookieKey],
+//   })
+// )
 
 // initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize())
+// app.use(passport.session())
 
 mongoose
   .connect(keys.mongodb.dbURI, {
